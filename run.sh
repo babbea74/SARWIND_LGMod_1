@@ -13,7 +13,7 @@ vnc4server
 export DISPLAY=$HOSTNAME:1
 ./run_SARWIND_LGMod_v401.sh /MCR_R2011b/v716 ./InData/SARWIND_IO_Info.txt ./InData/SARWIND_Settings.txt
 ls ./OutData > text
-gzip -r OutData.zip OutData
+zip -r OutData.zip OutData
 find ./OutData -name *_Results.txt -exec mv {} . \;
 find . -name *_Results.txt -exec mv {} SARWIND_LGMod_Results.txt \;
 cat  SARWIND_LGMod_Results.txt text >  SARWIND_LGMod_Results.txt
